@@ -1,13 +1,14 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
+import React, {Component, Fragment} from "react";
+import {connect} from "react-redux";
 
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+import {ToastContainer} from 'react-toastify';
 
 import * as tools from "../utils";
 import * as actions from "../redux/actions";
 
-import {Loader} from "../components";
+import {Loader, NavbarLang} from "../components";
+import {AppText} from "../pages/App/app.text";
 
 export const Public = ComposedComponent => {
     class Public extends Component {
@@ -30,14 +31,22 @@ export const Public = ComposedComponent => {
             }, 1500)
         }
 
+        handleChagneLang = (lang) => {
+            this.props.changeLanguage(lang);
+        };
+
         render() {
-          const { loading } = this.state;
-          if (loading) {
-            return <Loader />
-          }
-          
+            const {loading} = this.state;
+            if (loading) {
+                return <Loader/>
+            }
+
+            const lang = tools.getLanguage(AppText);
+            const {handleChagneLang} = this;
+
             return (
                 <Fragment>
+                    <NavbarLang handleChagneLang={handleChagneLang} lang={lang}/>
                     <ComposedComponent {...this.props} />
                     <ToastContainer/>
                 </Fragment>
@@ -45,7 +54,7 @@ export const Public = ComposedComponent => {
         }
     }
 
-    const mapStateToProps = ({ lang }) => {
+    const mapStateToProps = ({lang}) => {
         return {
             lang
         };

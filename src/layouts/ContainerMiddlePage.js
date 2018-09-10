@@ -8,8 +8,14 @@ class ContainerMiddlePage extends Component {
     }
 
     render() {
+        const { background } = this.props;
+
         return (
-            <Container>
+            <Container style={{
+                background: background,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }} fluid>
               <Row>
                 <Col lg={{size: 6, offset: 3}}>
                   <div className="d-flex justify-content-center align-items-center" style={{

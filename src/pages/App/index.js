@@ -3,23 +3,19 @@ import {connect} from 'react-redux';
 import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 
-import { AppText } from './app.text';
+import {AppText} from './app.text';
 import ContainerMiddlePage from '../../layouts/ContainerMiddlePage';
-import { BtnLang } from '../../components';
+import MsgBox from '../../layouts/MsgBox';
 
 class App extends Component {
-  handleChagneLang = (lang) =>{
-    this.props.changeLanguage(lang);
-  }
-
     render() {
-      const staticText = tools.checkLanguage(AppText);
-      const { handleChagneLang } = this;
+        const staticText = tools.checkLanguage(AppText);
 
         return (
             <ContainerMiddlePage>
-              <h1 className="display-4">{staticText.helloW}</h1>
-              <BtnLang handleChagneLang={handleChagneLang} />
+                <MsgBox ProfileImg="https://www.mypum.com/wp-content/uploads/2017/01/IMG_7521-min.jpg" ProfileAlt="profile image">
+                    <h1 className="display-4">{staticText.helloW}</h1>
+                </MsgBox>
             </ContainerMiddlePage>
         );
     }
