@@ -13,7 +13,7 @@ export const getLanguage = () => {
 };
 
 export const setDefaultLanguage = () => {
-    return localStorage.setItem('language', 'th');
+    return localStorage.setItem('language', 'en');
 };
 
 export const saveLanguageToStorage = (lang) => {

@@ -7,7 +7,7 @@ import {ToastContainer} from 'react-toastify';
 import * as tools from "../utils";
 import * as actions from "../redux/actions";
 
-import {Loader, NavbarLang} from "../components";
+import {FooterTextOnly, Loader, NavbarLang} from "../components";
 import {AppText} from "../pages/App/app.text";
 
 export const Public = ComposedComponent => {
@@ -48,6 +48,7 @@ export const Public = ComposedComponent => {
                 <Fragment>
                     <NavbarLang handleChagneLang={handleChagneLang} lang={lang}/>
                     <ComposedComponent {...this.props} />
+                    <FooterTextOnly footerText="Copyright By tickstudiu"/>
                     <ToastContainer/>
                 </Fragment>
             );

@@ -3,7 +3,7 @@ import { Button, ButtonGroup } from 'reactstrap';
 
 export default class BtnLang extends React.Component {
   render() {
-    const { handleChagneLang } = this.props
+    const { handleChagneLang } = this.props;
 
     return (
       <ButtonGroup>
