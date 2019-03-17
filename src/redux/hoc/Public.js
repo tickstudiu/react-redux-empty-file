@@ -4,11 +4,11 @@ import {connect} from "react-redux";
 import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from 'react-toastify';
 
-import * as tools from "../utils";
-import * as actions from "../redux/actions";
+import * as tools from "../../utils/index";
+import * as actions from "../actions/index";
 
-import {FooterTextOnly, Loader, NavbarLang} from "../components";
-import {AppText} from "../pages/App/app.text";
+import {FooterTextOnly, Loader, NavbarLang} from "../../components/index";
+import {AppText} from "../../pages/App/app.text";
 
 export const Public = ComposedComponent => {
     class Public extends Component {

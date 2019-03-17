@@ -2,7 +2,7 @@ import App from '../pages/App';
 import Login from '../pages/Login';
 import NotPage from '../pages/404';
 
-import {Public} from '../HOC';
+import {Public} from '../redux/hoc';
 
 const indexRoutes = [
     {

@@ -4,8 +4,8 @@ import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 
 import {AppText} from './app.text';
-import ContainerMiddlePage from '../../layouts/ContainerMiddlePage';
-import MsgBox from '../../layouts/MsgBox';
+import ContainerMiddlePage from '../../components/Layouts/ContainerMiddlePage';
+import MsgBox from '../../components/Layouts/MsgBox';
 
 class App extends Component {
     render() {

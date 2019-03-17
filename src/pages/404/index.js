@@ -4,7 +4,7 @@ import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 
 import { Text404 } from './404.text';
-import ContainerMiddlePage from '../../layouts/ContainerMiddlePage';
+import ContainerMiddlePage from '../../components/Layouts/ContainerMiddlePage';
 import { Button } from 'reactstrap';
 
 class App extends Component {

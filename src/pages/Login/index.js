@@ -5,7 +5,7 @@ import * as action from '../../redux/actions';
 
 import {FormLogin} from '../../components';
 import {LoginText} from './login.text';
-import ContainerMiddlePage from '../../layouts/ContainerMiddlePage';
+import ContainerMiddlePage from '../../components/Layouts/ContainerMiddlePage';
 
 class App extends Component {
     handleChange = (event) =>{
